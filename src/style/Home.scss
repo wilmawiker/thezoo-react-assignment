@@ -1,0 +1,32 @@
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #0f0f0f;
+  margin-bottom: 2em;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 2em;
+    margin-right: 2em;
+    list-style-type: none;
+
+    li a {
+      color: white;
+
+      &:hover {
+        color: #575757;
+      }
+    }
+  }
+}

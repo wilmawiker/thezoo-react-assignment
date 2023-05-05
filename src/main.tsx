@@ -5,6 +5,7 @@ import "./index.scss";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import { Animals } from "./pages/Animals";
+import { AnimalDetails } from "./pages/AnimalDetails";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/animals",
     element: <Animals></Animals>,
+  },
+  {
+    path: "/animals/:id",
+    element: <AnimalDetails></AnimalDetails>,
   },
 ]);
 
