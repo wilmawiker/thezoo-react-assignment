@@ -14,7 +14,7 @@ function Navbar() {
         </ul>
         <span>
           <img
-            src="src/assets/rabbit.png"
+            src="../src/assets/rabbit.png"
             alt="Rabbit silhouette"
             className="nav-rabbit"
           />
