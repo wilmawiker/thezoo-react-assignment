@@ -15,13 +15,6 @@ function ShowAnimal() {
 
   let classCard = "";
 
-  const [disabled, setDisabled] = useState(false);
-  useEffect(() => {
-    if (animal.isFed === true) {
-      setDisabled(true);
-    }
-  }, []);
-
   if (animal.isFed === false) {
     classCard = "animal-details";
   } else {
@@ -34,7 +27,6 @@ function ShowAnimal() {
     animal.lastFed = new Date().toLocaleString();
     setAnimals([...animals, animal]);
     localStorage.setItem("Animals", JSON.stringify(animals));
-    setDisabled(true);
     console.log(animal);
   };
 
@@ -64,7 +56,7 @@ function ShowAnimal() {
           onClick={() => {
             feedAnimal(animal);
           }}
-          disabled={disabled}
+          disabled={animal?.isFed === true}
         >
           Mata {animal.name}
         </button>
