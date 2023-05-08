@@ -20,7 +20,14 @@ export const Animals = () => {
 
   let classForAnimalCard = "";
 
+  let timeNow = new Date().getTime();
+
   const animalsToShow = animals.map((animal, i) => {
+    if (timeNow - Date.parse(animal.lastFed) > 10800000) {
+      animal.isFed = false;
+      localStorage.setItem("Animals", JSON.stringify(animals));
+    }
+
     if (animal.isFed === false) {
       classForAnimalCard = "animal-card";
     } else {
@@ -29,6 +36,7 @@ export const Animals = () => {
 
     return (
       <div key={animal.id} className={classForAnimalCard}>
+        {animal.isFed === false && <p>Jag är hungrig!</p>}
         <h3>{animal.name}</h3>
         <img
           src={animal.imageUrl}

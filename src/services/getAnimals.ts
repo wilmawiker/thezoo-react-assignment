@@ -5,7 +5,6 @@ export async function getAllAnimals() {
   let response = await axios.get<IAnimal[]>(
     "https://animals.azurewebsites.net/api/animals"
   );
-  console.log(response.data);
   localStorage.setItem("Animals", JSON.stringify(response.data));
   return response.data;
 }

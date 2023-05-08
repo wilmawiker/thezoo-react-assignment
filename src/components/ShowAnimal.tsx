@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { IAnimal } from "../models/IAnimal";
 import { useParams } from "react-router";
 import { useAlternativeImg } from "../helpers/useAlternativeImg";
@@ -22,12 +22,10 @@ function ShowAnimal() {
   }
 
   const feedAnimal = (animal: IAnimal) => {
-    console.log(animal);
     animal.isFed = true;
     animal.lastFed = new Date().toLocaleString();
     setAnimals([...animals, animal]);
     localStorage.setItem("Animals", JSON.stringify(animals));
-    console.log(animal);
   };
 
   return (
