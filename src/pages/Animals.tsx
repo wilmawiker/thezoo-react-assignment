@@ -36,7 +36,9 @@ export const Animals = () => {
 
     return (
       <div key={animal.id} className={classForAnimalCard}>
-        {animal.isFed === false && <p>Jag är hungrig!</p>}
+        {timeNow - Date.parse(animal.lastFed) > 14400000 && (
+          <p>Jag är hungrig!</p>
+        )}
         <h3>{animal.name}</h3>
         <img
           src={animal.imageUrl}

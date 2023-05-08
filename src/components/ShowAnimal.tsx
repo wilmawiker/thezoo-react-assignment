@@ -14,6 +14,7 @@ function ShowAnimal() {
   )!;
 
   let classCard = "";
+  let timeNow = new Date().getTime();
 
   if (animal.isFed === false) {
     classCard = "animal-details";
@@ -31,6 +32,9 @@ function ShowAnimal() {
   return (
     <div className="animals">
       <div key={animal.id} className={classCard}>
+        {timeNow - Date.parse(animal.lastFed) > 14400000 && (
+          <p>Jag är hungrig!</p>
+        )}
         <h3>{animal.name}</h3>
         <div className="img-facts">
           <img
