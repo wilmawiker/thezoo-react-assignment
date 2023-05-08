@@ -1,4 +1,3 @@
-import { getAllAnimals } from "../services/getAnimals";
 import { Link } from "react-router-dom";
 
 function Navbar() {

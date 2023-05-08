@@ -1,17 +1,8 @@
-a {
-  font-weight: 500;
-  color: #ffffff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #050505;
-}
-
 .animals {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 2em;
 
@@ -21,17 +12,56 @@ a:hover {
     justify-content: space-between;
     padding: 0.5em;
     align-items: center;
-    width: 30%;
-    min-height: 550px;
+    width: 80%;
+    min-height: 450px;
     background-color: #ff6868;
+    border-radius: 5px;
 
     &--fed {
       @extend .animal-card;
       background-color: #99ff83;
+
+      a {
+        background-color: #75c263 !important;
+
+        &:hover {
+          background-color: #5c9a4e !important;
+        }
+      }
     }
 
     .animal-image {
-      width: 300px;
+      width: 250px;
+      border-radius: 5px;
+    }
+
+    a {
+      border-radius: 5px;
+      background-color: #e05959;
+      font-weight: 500;
+      color: #ffffff;
+      text-decoration: inherit;
+      padding: 20px;
+      border: 1px solid transparent;
+
+      &:hover {
+        background-color: #bb4b4b;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .animals {
+    flex-direction: row;
+
+    .animal-card {
+      width: 30%;
+      min-height: 600px;
+
+      .animal-image {
+        width: 300px;
+      }
     }
   }
 }

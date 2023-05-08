@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IAnimal } from "../models/IAnimal";
 import { useParams } from "react-router";
-import { useAlternativeImg } from "../helpers/functions";
+import { useAlternativeImg } from "../helpers/useAlternativeImg";
 
 function ShowAnimal() {
   const [animals, setAnimals] = useState<IAnimal[]>(
@@ -23,9 +23,9 @@ function ShowAnimal() {
   }, []);
 
   if (animal.isFed === false) {
-    classCard = "animal-card";
+    classCard = "animal-details";
   } else {
-    classCard = "animal-card--fed";
+    classCard = "animal-details--fed";
   }
 
   const feedAnimal = (animal: IAnimal) => {

@@ -1,5 +1,3 @@
-import { IAnimal } from "../models/IAnimal";
-
 const alternativeImage = "..\\src\\assets\\placeholder.png";
 
 export const useAlternativeImg = (e: any) => {

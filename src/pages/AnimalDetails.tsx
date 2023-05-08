@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { IAnimal } from "../models/IAnimal";
-import { useParams } from "react-router";
 import Navbar from "../components/Navbar";
 import ShowAnimal from "../components/ShowAnimal";
+import Footer from "../components/Footer";
 
 export const AnimalDetails = () => {
   const [animals, setAnimals] = useState<IAnimal[]>([]);
@@ -15,6 +15,7 @@ export const AnimalDetails = () => {
     <>
       <Navbar></Navbar>
       <ShowAnimal></ShowAnimal>
+      <Footer></Footer>
     </>
   );
 };

@@ -3,7 +3,8 @@ import Navbar from "../components/Navbar";
 import { IAnimal } from "../models/IAnimal";
 import { getAllAnimals } from "../services/getAnimals";
 import { Link } from "react-router-dom";
-import { useAlternativeImg } from "../helpers/functions";
+import { useAlternativeImg } from "../helpers/useAlternativeImg";
+import Footer from "../components/Footer";
 
 export const Animals = () => {
   const [animals, setAnimals] = useState<IAnimal[]>([]);
@@ -46,6 +47,7 @@ export const Animals = () => {
     <>
       <Navbar></Navbar>
       <div className="animals">{animalsToShow}</div>
+      <Footer></Footer>
     </>
   );
 };
