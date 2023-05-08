@@ -34,6 +34,7 @@ export const Animals = () => {
           src={animal.imageUrl}
           className="animal-image"
           onError={useAlternativeImg}
+          alt={animal.latinName}
         />
         <p>{animal.shortDescription}</p>
         <Link key={i} to={animal.id.toString()}>

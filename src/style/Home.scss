@@ -3,6 +3,7 @@
 nav {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   background-color: #66c057;
   margin-bottom: 2em;
@@ -25,14 +26,22 @@ nav {
       }
     }
   }
+
+  .nav-rabbit {
+    width: 50px;
+    margin-right: 20px;
+  }
 }
 
 .landing-page {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
+
+  .logo {
+    max-width: 200px;
+  }
 }
 
 footer {
@@ -48,5 +57,11 @@ footer {
   .icons {
     display: flex;
     gap: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    max-width: 700px !important;
   }
 }

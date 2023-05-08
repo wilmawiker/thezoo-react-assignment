@@ -12,6 +12,13 @@ function Navbar() {
             <Link to="/animals">Djuren</Link>
           </li>
         </ul>
+        <span>
+          <img
+            src="src/assets/rabbit.png"
+            alt="Rabbit silhouette"
+            className="nav-rabbit"
+          />
+        </span>
       </nav>
     </>
   );

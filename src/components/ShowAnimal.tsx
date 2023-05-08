@@ -47,6 +47,7 @@ function ShowAnimal() {
             src={animal.imageUrl}
             className="animal-image"
             onError={useAlternativeImg}
+            alt={`Djuret ${animal.name} på bild.`}
           />
           <div className="facts">
             <p>Född: {animal.yearOfBirth}</p>
